@@ -22,16 +22,17 @@ const taskSchema = new mongoose.Schema({
   },
   dueDate: {
     type: Date,
-    
+    required:true,
   },
   priority: {
     type: String,
-    enum: ['low', 'medium', 'high'],
+    enum: ['Low', 'Medium', 'High'],
     required: true,
   },
   status: {
     type: String,
-    enum: ['to-do', 'in-progress', 'completed'],
+    enum: ['To-do', 'In-progress', 'Completed'],
+    required:true,
     
   },
   historyLog: [taskHistorySchema], // Add the historyLog field as an array of taskHistorySchema

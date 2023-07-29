@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/task_management', {
+mongoose.connect('mongodb+srv://Treasurer:treasure@cluster1.ilidknz.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
@@ -26,7 +26,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/', (req,res)=>{
     res.send("Nice working");
 });
-// Start the server
+//  server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

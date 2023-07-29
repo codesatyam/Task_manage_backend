@@ -28,7 +28,7 @@ exports.createTask = async (req, res) => {
     // Create a new history log entry with the current timestamp and task data
     const historyEntry = {
       timestamp: new Date(),
-      changes: { ...taskData } // Clone the task data to capture the initial state
+      changes: { ...taskData } 
     };
     // console.log(changes);
     // Create a new task with the given data
